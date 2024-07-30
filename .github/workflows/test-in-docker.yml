@@ -16,7 +16,7 @@ jobs:
     name: Container Test
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/baconpaul/sst-dockerimages-ubuntu18:3
+      image: baconpaul/sst-dockerimages-ubuntu18:3
     steps:
       - name: uname-a
         run: |
