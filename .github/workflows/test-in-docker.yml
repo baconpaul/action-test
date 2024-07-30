@@ -18,9 +18,8 @@ jobs:
     container:
       image: ghcr.io/baconpaul/sst-dockerimages/ubuntu18_surge_build:main
     steps:
-      - name: uname-a
+      - name: show versions
         run: |
-          uname -a
-          ls -l
+          ldd --version
           cmake --version
           gcc --version
