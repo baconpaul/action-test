@@ -1,0 +1,26 @@
+name: Test in Docker
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    tags:
+      - 'v**'
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  container-test-job:
+    name: Container Test
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/baconpaul/sst-dockerimages-ubuntu18:3
+    steps:
+      - name: uname-a
+        run: |
+          uname -a
+          ls -l
+          gcc --version
+          cmake --version
