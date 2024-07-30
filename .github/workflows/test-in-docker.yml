@@ -22,5 +22,6 @@ jobs:
         run: |
           uname -a
           ls -l
-          gcc --version
+          sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-11 11
+          sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-11 11
           cmake --version
